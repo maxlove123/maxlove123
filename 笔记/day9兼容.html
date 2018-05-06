@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding:0;}
+		body{background:#ccc;}
+		h2{font-size:50px;width:80%;margin:50px auto;}
+		h3{width:80%;height:50px;background:#199475;font-size:30px;line-height:50px;margin:20px auto;color:#fff;}
+		span{font-size:20px;font-weight:900;display: block;margin:10px 0;}
+		p{width:80%;margin:20px auto;line-height:24px;}
+		.redc{color:#d00;}
+	</style>
+</head>
+<body>
+	<h2>浏览器兼容</h2>
+	<h3>常见的主流浏览器</h3>
+	<p><span>1）主流浏览器</span>
+Internet Explorer、 Safari、Mozilla Firefox、 Google Chrome、Opera、百度、360、搜狗、傲游  
+<span>2）最早的浏览器 :</span> Mosaic  /  Netscape Navigator(网景领航者)（1994-2008）简称NN
+</p>
+	<h3>五大浏览器内核</h3>
+	<p>•Trident   （MSHTML）     （三叉戟；三叉线；三齿鱼叉）<br>
+•Gecko      （壁虎）<br>
+•Presto      （ 迅速的）<br>
+•Webkit    （Safari内核,Chrome内核原型,它是苹果公司自己的内核，也是苹果的Safari浏览器使用的内核）<br>
+•Blink         (由Google和Opera Software开发的浏览器排版引擎)。
+</p>
+	<h3>五大浏览器内核代表作品</h3>
+	<p><span>*Trident:         IE、Maxthon(遨游)、腾讯 、Theworld世界之窗、360浏览器</span>
+
+代表作品IE,因为IE捆绑在Windows中，所以占有极高的市场份额，又称IE内核或是MSHTML，此内核只能应用于windows平台，且是不开源的。
+
+<span>*Gecko：代表作品Mozilla Firefox 是开源的,</span>它的最大优势是跨平台，能在Microsoft Windows、Linux和MacOS X等主要操作系统上运行。
+
+<span>*Webkit : 代表作品Safari、Chrome ，</span> 是一个开源项目。
+
+
+<span>*Presto :   代表作品Opera ，Presto是由Opera Software开发的浏览器排版引擎</span>。它也是世界上公认的渲染速度最快的引擎。
+
+<span>*Blink ：由Google和Opera Software开发的浏览器排版引擎，2013年4月发布。</span>
+
+</p>
+
+<h3>为什么会出现浏览器兼容问题？</h3>
+<p>由于各大主流浏览器由不同的厂家开发，所用的核心架构和代码也很难重和，这就为各种莫名其妙的Bug(代码错误）提供了温床。再加上各大厂商出于自身利益考虑而设置的种种技术壁垒，都让CSS应用起来比想象得要麻烦。浏览器的兼容问题是我们必须去克服的。
+</p>
+
+<h3>CSS Bug、CSS Hack和Filter</h3>
+<p>1) <span> CSS Bug:</span> CSS样式在各浏览器中解析不一致的情况，或者说CSS样式在浏览器中不能正确显示的问题称为CSS bug.
+<br><br>
+2) <span> CSS Hack: </span> CSS中，Hack是指一种兼容CSS在不同浏览器中正确显示的技巧方法，因为它们都属于个人对CSS代码的非官方的修改，或非官方的补丁。有些人更喜欢使用patch(补丁)来描述这种行为。
+<br><br>
+3) <span>Filter:</span> 表示过滤器的意思，它是一种对特定的浏览器或浏览器组显示或隐藏规则或声明的方法。本质上讲，Filter是一种用来过滤不同浏览器的Hack类型。
+</p>
+
+<h3>*使用Hack带来的一些副作用
+</h3>
+<p>降低了CSS代码的可读性，增加了代码的负担。
+
+<span class="redc">*设计CSS Hack和 Filter通常有两种方法：</span>
+
+1)一种是利用浏览器自身的Bug，来隐藏或显示样式或声明；
+<br><br>
+2)另一种是利用浏览器对CSS支持的不完善，如对某些规则或语法还没有形成支持，来隐藏或显示样式。
+</p>
+
+
+<h3 style="margin-top:100px">常见的CSS  bug</h3>
+
+<p><span class="redc">1)图片有边框BUG</span>
+当图片加<a href=“#”></a>在IE上会出现边框
+Hack:给图片加border:0;或者border:0    none;
+
+<span class="redc">2)图片间隙</span>
+
+div中的图片间隙BUG <br>
+描述：在div中插入图片时，图片会将div下方撑大大约三像素。<br>
+hack1:将</div>与<img>写在一行上；<br>
+hack2:将<img>转为块状元素，给<img>添加声明：display:block;  <br><br>
+dt,li中图片间隙<br>
+hack:  将<img>转为块状元素，给<img>添加声明：display:block;
+
+
+<span class="redc">3)  双倍浮向（双倍边距）（只有IE6出现）</span>
+
+描述：当Ie6及更低版本浏览器在解析浮动元素时，会错误地把浮向边边界（margin）加倍显示。
+<br>
+hack:给浮动元素添加声明：display:inline;
+<br>
+<span class="redc">4)默认高度（IE6、IE7）</span>
+
+描述：在IE6及以下版本中，部分块元素拥有默认高度（在16px左右；）<br>
+hack1:给元素添加声明：font-size:0;<br>
+hack2：给元素添加声明：overflow:hidden;
+
+
+<span class="redc">5)表单元素行高对齐不一致</span>
+描述：表单元素行高对齐方式不一致<br>
+hack:给表单元素添加声明：float:left;
+
+
+<span class="redc">6)按钮元素默认大小不一</span>
+
+描述：各浏览器中按钮元素大小不一致<br>
+hack1： 统一大小/（用a标记模拟）<br>
+hack2:input外边套一个标签，在这个标签里写按钮的样式，把input的边框去掉。<br>
+hack3:如果这个按钮是一个图片，直接把图片作为按钮的背景图即可。
+
+
+<span class="redc">7)百分比bug  </span>
+
+描述：在IE6及以下版本中在解析百分比时，会按四舍五入方式计算从而导致50%加50%大于100%的情况。
+（也会受系统影响）
+<br>
+hack:  给右面的浮动元素添加声明：<br>
+          clear:right;   意思：清除右浮动。    <br> 
+         clear:left:清除左浮动<br>
+         clear:both:清除两边的浮动
+
+
+ <span class="redc">8)鼠标指针bug</span>
+
+描述：cursor属性的hand属性值只有IE9以下浏览器识别，其它浏览器不识别该声明，cursor属性的pointer属性值IE6.0以上版本及其它内核浏览器都识别该声明。<br>
+hack:    如统一某元素鼠标指针形状为手型，<br>
+应添加声明：cursor:pointer
+
+<span class="redc">9)透明属性</span>
+兼容其他浏览器写法：opacity:value;(value的取值范围0-1;
+	例：opacity:0.5;
+) <br>
+IE浏览器写法：filter:alpha(opacity=value);取值范围 1-100(整数)
+
+<span class="redc">10）li列表的BUG</span>
+
+
+1）：当父元素(li) 有float:left;子元素(a) 没设置浮动的情况下会出现垂直bug；<br>
+              Hack:给父元素li和子元素a都设置浮动；
+<br><br>
+
+2）：当给li中的a转成block；并且有height,并有float的，li中没设置浮动会出现阶梯显示，<br>
+               hack：同时给li加float;
+
+
+
+
+<span class="redc">11）margin上下重叠</span>
+
+当前元素(父元素里面第一个子元素)与父元素没有设置任何浮动的情况下，设置margin-top后，会错误的把margin-top加在父级元素上，<br>
+Css hack:1、给父级元素添加overflow:hidden;(推荐使用) <br>
+	2、给父元素或者子元素加浮动
+
+<span class="redc">12）margin BUG</span>
+当两个上下排列的元素，上元素有margin-bottom：30px；下面元素有margin-top:20px；他们中间的距离不会叠加，而是会设置为较大的值；
+
+
+
+
+
+
+<span class="redc" style="margin-top:300px">
+	cursor:      <br>   ;
+auto默认 <br>   
+crosshair加号 <br>   
+text文本 <br>   
+wait等待 <br>   
+help帮助 <br>   
+progress过程 <br>   
+inherit继承 <br>   
+move移动 <br>   
+ne-resize向上或向右移动 <br>   
+pointer手形
+
+</span>
+</p>
+</body>
+</html>

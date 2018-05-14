@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<!--top-->
+	<div class="top-con">
+		<h1 class="logo">
+			<img src="images/logo_03.png" alt="">
+		</h1>
+		<ul class="nav">
+			<li>
+				<a href="#">HOME</a>
+			</li>
+			<li>
+				<a href="#">HOME</a>
+			</li>
+			<li>
+				<a href="#">HOME</a>
+			</li>
+			<li>
+				<a href="#">HOME</a>
+			</li>
+			<li>
+				<a href="#">HOME</a>
+			</li>
+			<li>
+				<a href="#">HOME</a>
+			</li>
+		</ul>
+	</div>
+	<!--banner-->
+	<div id="banner">
+		<div class="banner-con"></div>
+	</div>
+	<!--services-->
+	<div class="services-con">
+		<h2 class="tit-h2">服务范围</h2>
+		<h3 class="tit-h3">our services</h3>
+		<div class="services-show clear-fix">
+			<div class="fuwu">
+				<img src="images/img_03.png" alt="">
+				<h4>1.web design</h4>
+				<p>企业品牌网站设计/手机网站制作动画网站创意设计</p>
+			</div>
+			<!-- <div class="fuwu">
+				<img src="images/img_03.png" alt="">
+				<h4>1.web design</h4>
+				<p>企业品牌网站设计/手机网站制作动画网站创意设计</p>
+			</div>
+			<div class="fuwu">
+				<img src="images/img_03.png" alt="">
+				<h4>1.web design</h4>
+				<p>企业品牌网站设计/手机网站制作动画网站创意设计</p>
+			</div>
+			<div class="fuwu">
+				<img src="images/img_03.png" alt="">
+				<h4>1.web design</h4>
+				<p>企业品牌网站设计/手机网站制作动画网站创意设计</p>
+			</div> -->
+		</div>
+	</div>
+	<!--case-->
+	<div id="case">
+		<div class="case-con">
+			<h2 class="tit-h2">{ 客户案例 }</h2>
+			<h3 class="tit-h3">With the best professional technology, to design the best innovative web site</h3>
+			<div class="case-box clear-fix">
+				<a href="#"><img src="images/case_03.jpg" alt=""></a>
+				<a href="#" class="mar"><img src="images/case_03.jpg" alt=""></a>
+				<a href="#"><img src="images/case_03.jpg" alt=""></a>
+				
+			</div>
+			<a href="#" class="case-btn">view more</a>
+		</div>
+	</div>
+</body>
+</html>
